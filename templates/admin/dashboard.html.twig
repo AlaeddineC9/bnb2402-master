@@ -1,0 +1,18 @@
+{% extends '@EasyAdmin/page/content.html.twig' %}
+{% block main %}
+	<div class="d-flex gap-3 flex-wrap">
+		<div class="col-4 border rounded-3 p-3">
+			<h5>Total Bookings</h5>
+			<p class="fs-1 fw-bold">{{ bookings|length()}}</p>
+		</div>
+		<div class="col-4 border rounded-3 p-3">
+			<h5>Total users</h5>
+			<p class="fs-1 fw-bold">{{ users|length()}}</p>
+		</div>
+		<div class="col-4 border rounded-3 p-3">
+			<h5>Past reviews</h5>
+			<p class="fs-1 fw-bold">{{ offers|length()}}</p>
+		</div>
+		
+	</div>
+{% endblock main %}

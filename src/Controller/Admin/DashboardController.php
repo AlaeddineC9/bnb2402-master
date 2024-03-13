@@ -2,6 +2,11 @@
 
 namespace App\Controller\Admin;
 
+use App\Entity\Booking;
+use App\Entity\Equipment;
+use App\Entity\Favorite;
+use App\Entity\Offer;
+use App\Entity\Review;
 use App\Entity\User;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -41,7 +46,14 @@ class DashboardController extends AbstractDashboardController
 
     public function configureMenuItems(): iterable
     {
+        yield MenuItem::linkToDashboard('Dashboard', 'fa fa-home');
         yield MenuItem::linkToCrud('Users', 'fas fa-list', User::class);
+        
+        yield MenuItem::linkToCrud('Bookings', 'fas fa-list', Booking::class);
+        yield MenuItem::linkToCrud('Equipements', 'fas fa-list', Equipment::class);
+        yield MenuItem::linkToCrud('Favorites', 'fas fa-list', Favorite::class);
+        yield MenuItem::linkToCrud('Offers', 'fas fa-list', Offer::class);
+        yield MenuItem::linkToCrud('Reviews', 'fas fa-list', Review::class);
         // yield MenuItem::linkToCrud('The Label', 'fas fa-list', EntityClass::class);
     }
 }
