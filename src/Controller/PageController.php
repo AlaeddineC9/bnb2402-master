@@ -3,6 +3,7 @@
 namespace App\Controller;
 
 use App\Form\ContactType;
+use App\Repository\OfferRepository;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Attribute\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -84,11 +85,17 @@ class PageController extends AbstractController
     }
 
   
-    // Page d'accueil de l'application
+    // Page de profile de l'utilisateur
     #[Route('/profile', name: 'profile')]
-    public function profile(): Response
+    public function profile(
+        OfferRepository  $offerRepository
+    ): Response
     {
-        return $this->render('page/profile.html.twig', []);
+        return $this->render('page/profile.html.twig', [
+            'offers'=> $offerRepository->findBy(['owner'=>$this->getUser()],//$this->getUser() = app.user
+       
+        ['id'=>'DESC'],2 )
+        ]);
     }
 
     // Page de redirection après l'inscription et la confirmation de l'adresse mail
