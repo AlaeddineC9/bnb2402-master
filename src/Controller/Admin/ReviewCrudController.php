@@ -23,7 +23,7 @@ class ReviewCrudController extends AbstractCrudController
             ->setPageTitle('index', 'All Reviews')
             ->setEntityLabelInSingular('Review')
             ->setEntityLabelInPlural('Reviews')
-            ->setSearchFields(['name'])
+            ->setSearchFields(['comment'])
             ->setDefaultSort(['id' => 'DESC'])
             ;
     }

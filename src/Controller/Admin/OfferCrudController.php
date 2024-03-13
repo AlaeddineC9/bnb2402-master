@@ -23,7 +23,7 @@ class OfferCrudController extends AbstractCrudController
             ->setPageTitle('index', 'All Offers')
             ->setEntityLabelInSingular('Offer')
             ->setEntityLabelInPlural('Offers')
-            ->setSearchFields(['name'])
+            ->setSearchFields(['title'])
             ->setDefaultSort(['id' => 'DESC'])
             ;
     }

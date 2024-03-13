@@ -20,11 +20,11 @@ class AppFixtures extends Fixture
         $admin = new User();
         $admin->setEmail('admin@admin.fr')
             ->setRoles(['ROLE_ADMIN'])
-            ->setPassword('$2y$13$ZafFA4usDurLdb4tHItctuHPXJW4BKsqJvUEpXwUbFO/bGZ9IU99G')
+            ->setPassword('$2y$13$Tore5YougGSWaA7Duz5I7OUpvTuffqiKczE2EhRR0MBy13M0ugH4O')
             ->setFirstname($faker->firstName())
             ->setLastname($faker->lastName())
             ->setPhone($faker->phoneNumber())
-            ->setAddress($faker->address())
+            ->setAddresse($faker->address())
             ->setCity($faker->city())
             ->setCountry($faker->country());
         $manager->persist($admin);
@@ -40,7 +40,7 @@ class AppFixtures extends Fixture
                 ->setFirstname($faker->firstName())
                 ->setLastname($faker->lastName())
                 ->setPhone($faker->phoneNumber())
-                ->setAddress($faker->address())
+                ->setAddresse($faker->address())
                 ->setCity($faker->city())
                 ->setCountry($faker->country());
 
@@ -58,7 +58,7 @@ class AppFixtures extends Fixture
                 ->setFirstname($faker->firstName())
                 ->setLastname($faker->lastName())
                 ->setPhone($faker->phoneNumber())
-                ->setAddress($faker->address())
+                ->setAddresse($faker->address())
                 ->setCity($faker->city())
                 ->setCountry($faker->country());
 

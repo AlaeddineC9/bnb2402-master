@@ -23,7 +23,7 @@ class EquipmentCrudController extends AbstractCrudController
             ->setPageTitle('index', 'All Equipements')
             ->setEntityLabelInSingular('Equipement')
             ->setEntityLabelInPlural('Equipements')
-            ->setSearchFields(['name'])
+            ->setSearchFields(['title'])
             ->setDefaultSort(['id' => 'DESC'])
             ;
     }

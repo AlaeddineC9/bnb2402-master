@@ -23,7 +23,7 @@ class FavoriteCrudController extends AbstractCrudController
             ->setPageTitle('index', 'All Favorites')
             ->setEntityLabelInSingular('Favorite')
             ->setEntityLabelInPlural('Favorites')
-            ->setSearchFields(['name'])
+            ->setSearchFields(['id'])
             ->setDefaultSort(['id' => 'DESC'])
             ;
     }
