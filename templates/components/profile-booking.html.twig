@@ -1,0 +1,28 @@
+{# Booking #}
+<div class="col-sm-6 col-lg-6 mb-4">
+	<div class="card">
+		<div class="card-header d-sm-flex justify-content-between align-items-center border-0">
+			<h5 class="card-title">
+				Vos réservations
+				<span class="badge bg-danger bg-opacity-10 text-danger">{{app.user.bookings|length}}</span>
+			</h5>
+			<a class="btn btn-primary-soft btn-sm" href="#">
+				Voir tout
+			</a>
+		</div>
+		<div class="card-body position-relative pt-3">
+			<div class="row g-3">
+				{% if app.user.bookings|length > 0 %}
+					{# Affiche une blouce des réservations #}
+				{% else %}
+					<div class="col-12">
+						<div class="alert alert-warning mb-0" role="alert">
+							You have no bookings yet.
+						</div>
+					</div>
+				{% endif %}
+			</div>
+		</div>
+		<!-- Card body END -->
+	</div>
+</div>
